@@ -1,0 +1,21 @@
+
+# Company BP QA
+Company BP QA validates company-level machine learning features.
+It checks missing values, data types, numerical ranges,
+and product-specific business rules.
+
+# Contact BP QA
+Contact BP QA validates contact-level machine learning features.
+It checks non-null identifiers, feature and target columns,
+boolean values, and ratios between zero and one.
+
+# Hexagon Scoring
+Hexagon combines activity-level signals into a predictive score.
+It uses activity probabilities and time-dependent weights.
+A sample combination formula is:
+score = 1 - product((1 - p_i) ** w_i)
+
+# QA Troubleshooting
+When a QA validation fails, investigate the organization,
+product, source data, failing SQL, null values,
+schema changes, and validation thresholds.

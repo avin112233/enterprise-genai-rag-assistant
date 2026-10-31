@@ -1,0 +1,21 @@
+question,expected_doc,retrieved_top_doc,retrieval_pass,keyword_check_pass,latency_seconds,input_tokens,output_tokens,generated_answer
+What validations are performed for Contact BP?,1,1,True,True,8.573,285,67,"Based on the retrieved context, Contact BP QA validates contact-level machine learning features, which includes:
+
+- Non-null identifiers
+- Feature and target columns
+- Boolean values
+- Ratios between zero and one
+
+These validations are performed at the contact level, as opposed to company-level validations, which are performed by Company BP QA."
+Explain Hexagon scoring.,2,2,True,True,12.545,299,87,"Hexagon scoring combines activity-level signals into a predictive score using activity probabilities and time-dependent weights. The score is calculated using the formula: score = 1 - product((1 - p_i) ** w_i), where p_i is the activity probability and w_i is the time-dependent weight. This formula allows for the incorporation of varying weights based on time, enabling a more nuanced assessment of activity levels. [doc_2]"
+How do I troubleshoot a QA failure?,3,3,True,True,17.144,286,125,"To troubleshoot a QA failure, investigate the following:
+
+1. Organization: Review company-level machine learning features.
+2. Product: Check product-specific business rules.
+3. Source data: Verify data types, numerical ranges, and missing values.
+4. Failing SQL: Examine the SQL query that failed validation.
+5. Null values: Check for null values in the data.
+6. Schema changes: Investigate recent schema changes that may have affected validation.
+7. Validation thresholds: Review the validation thresholds used.
+
+Refer to [doc_3] for a comprehensive list of areas to investigate when a QA validation fails."
